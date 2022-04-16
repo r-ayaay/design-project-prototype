@@ -2,6 +2,6 @@
 
 @section('content')
 <main>
-    this is home
+    <h1 class="brand">SERVICES & PRODUCTS</h1>
 </main>
 @endsection

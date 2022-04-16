@@ -2,6 +2,6 @@
 
 @section('content')
 <main>
-    this is home
+    this is about
 </main>
 @endsection

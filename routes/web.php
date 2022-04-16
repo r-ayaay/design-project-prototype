@@ -16,6 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('sections.home');
 });
+Route::get('/order', function () {
+    return view('sections.order');
+});
+Route::get('/about', function () {
+    return view('sections.about');
+});
 
 Route::get('/dashboard', function () {
     return view('admin.dashboard');

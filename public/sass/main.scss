@@ -24,16 +24,17 @@ nav {
         li {
             float: left;
 
+
             a {
                 display: block;
                 color: #48487f;
                 text-align: center;
-                padding: 20px 22px;
+                padding: 20px 22px 20px 0px;
                 text-decoration: none;
+                font-size: 24px;
             }
 
             a.brand {
-                font-size: 22px;
                 font-weight: 600;
             }
         }
