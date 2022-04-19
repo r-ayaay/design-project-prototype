@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('styling')
+<!-- insert julian's sass directory -->
+@endsection
+
 @section('content')
 <div class="container">
     <h1>this is where you place the login</h1>
