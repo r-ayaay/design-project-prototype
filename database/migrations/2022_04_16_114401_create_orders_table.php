@@ -20,22 +20,22 @@ return new class extends Migration
             $table->string('photo');
             $table->string('product');
             $table->string('quantity');
-            $table->integer('dimension_x');
-            $table->integer('dimension_y');
+            $table->float('dimension_x');
+            $table->float('dimension_y');
             $table->float('price');
             $table->string('status');
             $table->string('method_of_recieving');
         });
 
-        DB::table('order')->insert([
+        DB::table('orders')->insert([
             'client_name' => 'sean lim',
             'client_email' => 'sean@mail.com',
             'photo' => '',
             'product' => 'A4',
-            'quantity' => '10',
-            'dimension_x' => '21',
-            'dimension_y' => '29.7',
-            'price' => '',
+            'quantity' => 10,
+            'dimension_x' => 21,
+            'dimension_y' => 29.7,
+            'price' => 0.00,
             'status' => 'pending',
             'method_of_recieving' => 'pickup',
 
