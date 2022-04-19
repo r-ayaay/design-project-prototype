@@ -19,7 +19,6 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{URL::asset('css/admin.css')}}" rel="stylesheet">
     @yield('styling')
 </head>
 
