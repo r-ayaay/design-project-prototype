@@ -18,5 +18,8 @@ class Order extends Controller
         'quantity',
         'dimension_x',
         'dimension_y',
+        'price',
+        'status',
+        'method_of_receiving',
     ];
 }

@@ -22,7 +22,24 @@ return new class extends Migration
             $table->string('quantity');
             $table->integer('dimension_x');
             $table->integer('dimension_y');
+            $table->float('price');
+            $table->string('status');
+            $table->string('method_of_recieving');
         });
+
+        DB::table('order')->insert([
+            'client_name' => 'sean lim',
+            'client_email' => 'sean@mail.com',
+            'photo' => '',
+            'product' => 'A4',
+            'quantity' => '10',
+            'dimension_x' => '21',
+            'dimension_y' => '29.7',
+            'price' => '',
+            'status' => 'pending',
+            'method_of_recieving' => 'pickup',
+
+        ]);
     }
 
     /**
