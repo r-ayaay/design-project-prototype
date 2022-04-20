@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
+.container {
+  font-family: "Libre Baskerville";
+}
+
+.container .login-modal {
+  padding-top: 5%;
+  width: 50%;
+  margin: auto;
+}
+
+.container .login-modal .card {
+  border-radius: 15px;
+}
+
+.container .login-modal .card .card-header {
+  color: white;
+  padding-block: 15px;
+  background-color: #48487f;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  font-size: 17px;
+}
+
+.container .login-modal .card .card-body form .row .col-md-6 input[id="email"] {
+  padding-block: 10px;
+  font-size: 12px;
+}
+
+.container .login-modal .card .card-body form .row .col-md-6 input[id="password"] {
+  padding-block: 10px;
+  font-size: 12px;
+}
+
+.container .login-modal .card .card-body form .row .col-md-6 .form-check label[for="remember"] {
+  font-size: 12.5px;
+}
+
+.container .login-modal .card .card-body form .row .col-md-8 {
+  margin-inline: auto;
+}
+
+.container .login-modal .card .card-body form .row .col-md-8 .submit-btn {
+  margin-inline: auto;
+  display: block;
+  background-color: #48487f;
+  padding-block: 12px;
+  padding-inline: 35px;
+  color: white;
+  border-radius: 7px;
+  border: none;
+  outline: none;
+}
+/*# sourceMappingURL=login.css.map */
