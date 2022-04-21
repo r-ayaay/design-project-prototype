@@ -10,7 +10,7 @@
 
     <div class="login-modal">
         <div class="card">
-            <div class="card-header">Administrator Login (email: test@test.com pass:12345678) </div>
+            <div class="card-header">Administrator Login</div>
 
             <div class="card-body">
                 <form method="POST" action="{{ route('login') }}">

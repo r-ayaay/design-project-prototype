@@ -53,11 +53,11 @@
                         @endif -->
 
                         <!-- NO NEED FOR REGISTER -->
-                        <!-- @if (Route::has('register'))
+                        @if (Route::has('register'))
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}f</a>
                         </li>
-                        @endif -->
+                        @endif
 
 
                         @else

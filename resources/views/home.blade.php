@@ -6,10 +6,12 @@
 
 @section('content')
 <div class="container">
-    <a name="pending" value="pending" class="dashBoardLink" href="">Pending</a>
-    <a name="complete" value="complete" class="dashBoardLink" href="">Completed</a>
-    <a name="cancelled" value="cancelled" class="dashBoardLink" href="">Cancelled</a>
-        <br>
+    <div class="order-status-bar">
+        <a name="pending" value="pending" class="dashBoardLink" href="#" focus>Pending</a>
+        <a name="complete" value="complete" class="dashBoardLink" href="#">Completed</a>
+        <a name="cancelled" value="cancelled" class="dashBoardLink" href="#">Cancelled</a>
+    </div>
+        
     <table name="data">
         <tr class="header">
             <th>Order ID</th>
@@ -20,7 +22,45 @@
             <th>Qty.</th>
             <th>Size</th>
             <th>Price</th>
-            <th>Method of Recieving</th>
+            <th>Status</th>
+            <th>Method of Receiving</th>
+        </tr>
+        <tr class="body">
+            <!-- Some 'if statement' if there are no pending orders -->
+            @if(count($pendingOrders) > 0)
+                @foreach($pendingOrders as $dataRow)
+                    
+                    <td>{{$dataRow['id']}}</td>
+                    <td>{{$dataRow['client_name']}}</td>
+                    <td>{{$dataRow['client_email']}}</td>
+                    <td>{{$dataRow['photo']}}</td>
+                    <td>{{$dataRow['product']}}</td>
+                    <td>{{$dataRow['quantity']}}</td>
+                    <td>{{$dataRow['dimension_x']}}</td>
+                    <td>{{$dataRow['dimension_y']}}</td>
+                    <td>{{$dataRow['status']}}</td>
+                    <td>{{$dataRow['method_of_receiving']}}</td>
+                @endforeach
+
+            @else
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            @endif
+        </tr>
+        <tr class="footer">
+            <td class="navigation" colspan=9>
+                <div class="navigation-previous">
+                    Previous 1 Next
+                </div>
+            </td>
         </tr>
         <!-- TEST -->
         <!-- <tr>

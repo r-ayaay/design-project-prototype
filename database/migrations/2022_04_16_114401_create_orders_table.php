@@ -23,21 +23,21 @@ return new class extends Migration
             $table->float('dimension_x');
             $table->float('dimension_y');
             $table->float('price');
-            $table->string('status');
-            $table->string('method_of_recieving');
+            $table->enum('status', ['Pending', 'Completed', 'Canceled'])->default('Pending');
+            $table->enum('method_of_receiving', ['Pick-Up', 'Delivery']);
         });
 
         DB::table('orders')->insert([
             'client_name' => 'sean lim',
             'client_email' => 'sean@mail.com',
-            'photo' => '',
+            'photo' => 'stringforimagedata',
             'product' => 'A4',
             'quantity' => 10,
             'dimension_x' => 21,
             'dimension_y' => 29.7,
             'price' => 0.00,
-            'status' => 'pending',
-            'method_of_recieving' => 'pickup',
+            'status' => 'Pending',
+            'method_of_receiving' => 'Pick-Up',
 
         ]);
     }

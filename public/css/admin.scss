@@ -1,0 +1,87 @@
+$accentColor: #48487f;
+
+.container{
+    .order-status-bar{
+        a{
+            color: white;
+            background-color: $accentColor;
+            text-decoration: none;
+            border: 1px solid $accentColor;
+            border-radius: 5px;
+            padding-block: 12px;
+            padding-inline: 15px;
+            margin-right: 10px;
+            transition: 0.1s;
+    
+            &:hover{
+                background-color: white;
+                color: $accentColor;
+            }
+    
+            &:focus{
+                background-color: white;
+                color: $accentColor;
+            }
+
+        }
+    }
+
+    table {        
+        border-collapse: collapse;
+        border-radius: 10px;
+        margin-inline: auto;
+        margin-top: 20px;
+        width: 100%;
+        box-shadow: 0 0 2px 0 black;
+
+        
+        .header{
+            background-color: $accentColor;
+            color: white;  
+
+            th{
+                border-bottom: 1px solid rgb(121, 120, 120);
+                padding-block: 13px;
+                text-align: center;
+                
+                &:first-child{
+                    border-top-left-radius: 10px;
+                }
+    
+                &:last-child{
+                    border-top-right-radius: 10px;
+                    border-right: none;
+                }
+            }
+            
+            
+        }
+
+        .body{
+            background-color: rgb(239, 232, 232);
+
+            td{
+                padding: 12px;
+                text-align: center;
+            }
+        }
+
+        .footer{             
+            border-top: 1px solid rgb(188, 188, 188);;
+            .navigation{
+                padding: 12px;
+                text-align: center;
+
+                &:last-child{
+                    border-bottom-right-radius: 10px;
+                    // border-right: none;
+                }
+
+                &:first-child{
+                    border-bottom-left-radius: 10px;
+                    border-bottom-right-radius: 0px;
+                }
+            }
+        }
+    }
+}
