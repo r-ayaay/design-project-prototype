@@ -13,6 +13,10 @@
     }
 ?>
 
+@section('styling')
+<link href="{{URL::asset('css/admin.css')}}" rel="stylesheet">
+@endsection
+
 @section('content')
 <div class="container">
     <?php
