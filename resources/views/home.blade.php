@@ -1,24 +1,58 @@
 @extends('layouts.app')
+<!--
+<?php
+    $servername = "localhost";
+    $username = "username";
+    $password = "password";
+    $dbname = "desprojprototype";
+
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    if(!$conn){
+        die("Connection Failed");
+    }
+?>
 
 @section('content')
 <div class="container">
-    <h1>this is where you place the dashboard</h1>
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+    <?php
+        $sql = "SELECT * FROM orders WHERE orders.status='pending'";
+        $result = $conn->query($sql);
 
-                <div class="card-body">
-                    @if (session('status'))
-                    <div class="alert alert-success" role="alert">
-                        {{ session('status') }}
-                    </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
-        </div>
-    </div>
+        if($result->num_rows>0){
+            echo "<table>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Photo</th>
+                    <th>Product Type</th>
+                    <th>Qty.</th>
+                    <th>Size</th>
+                    <th>Price</th>
+                    <th>Method of Recieving</th>
+                    <th>Status</th>
+                </tr>
+            ";
+            while($row = $result->fetch_assoc()){
+                echo "<tr>
+                <td>".$row["id"]."</td>
+                <td>".$row["client_name"]."</td>
+                <td>".$row["client_email"]."</td>
+                <td>".$row["photo"]."</td>
+                <td>".$row["product"]."</td>
+                <td>".$row["quantity"]."</td>
+                <td>".$row["dimension_x"]." x ".$row["dimension_y"]."</td>
+                <td>".$row["price"]."</td>
+                <td>".$row["method_of_recieving"]."</td>
+                <td>".$row["status"]."</td>
+                </tr>";
+            }
+            echo "</table>";
+        }
+        else{
+            echo "no bitches";
+        }
+    ?>
 </div>
 @endsection
