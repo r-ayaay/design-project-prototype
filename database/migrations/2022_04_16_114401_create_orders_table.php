@@ -23,7 +23,7 @@ return new class extends Migration
             $table->float('dimension_x');
             $table->float('dimension_y');
             $table->float('price');
-            $table->enum('status', ['Pending', 'Completed', 'Canceled'])->default('Pending');
+            $table->enum('status', ['Pending', 'Completed', 'Cancelled'])->default('Pending');
             $table->enum('method_of_receiving', ['Pick-Up', 'Delivery']);
         });
 
@@ -38,7 +38,30 @@ return new class extends Migration
             'price' => 0.00,
             'status' => 'Pending',
             'method_of_receiving' => 'Pick-Up',
-
+        ]);
+        DB::table('orders')->insert([
+            'client_name' => 'sean lim',
+            'client_email' => 'sean@mail.com',
+            'photo' => 'stringforimagedata',
+            'product' => 'A4',
+            'quantity' => 10,
+            'dimension_x' => 21,
+            'dimension_y' => 29.7,
+            'price' => 0.00,
+            'status' => 'Completed',
+            'method_of_receiving' => 'Pick-Up',
+        ]);
+        DB::table('orders')->insert([
+            'client_name' => 'sean lim',
+            'client_email' => 'sean@mail.com',
+            'photo' => 'stringforimagedata',
+            'product' => 'A4',
+            'quantity' => 10,
+            'dimension_x' => 21,
+            'dimension_y' => 29.7,
+            'price' => 0.00,
+            'status' => 'Cancelled',
+            'method_of_receiving' => 'Pick-Up',
         ]);
     }
 

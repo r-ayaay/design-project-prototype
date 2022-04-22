@@ -23,9 +23,20 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
+    { 
+        $orders = Order::all()->where('status','=','Pending');
+        return view('home')->with('orders',$orders);
+    }
+
+    public function getCompletedOrders()
     {
-        $test = "nuts";
-        $pendingOrders = Order::all();
-        return view('home')->with('pendingOrders',$pendingOrders);
+        $orders = Order::all()->where('status','=','Completed');
+        return view('home')->with('orders',$orders);
+    }
+
+    public function getCancelledOrders()
+    {
+        $orders = Order::all()->where('status','=','Cancelled');
+        return view('home')->with('orders',$orders);
     }
 }

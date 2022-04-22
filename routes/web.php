@@ -33,4 +33,7 @@ Route::get('/dashboard', function () {
 
 Auth::routes();
 
+// These routes retrieve the data for the orders of all statuses (Pending, Completed, Cancelled)
 Route::get('/admin', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/admin/completed', [App\Http\Controllers\HomeController::class, 'getCompletedOrders']);
+Route::get('/admin/cancelled', [App\Http\Controllers\HomeController::class, 'getCancelledOrders']);

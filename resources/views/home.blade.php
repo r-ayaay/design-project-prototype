@@ -7,9 +7,9 @@
 @section('content')
 <div class="container">
     <div class="order-status-bar">
-        <a name="pending" value="pending" class="dashBoardLink" href="#" focus>Pending</a>
-        <a name="complete" value="complete" class="dashBoardLink" href="#">Completed</a>
-        <a name="cancelled" value="cancelled" class="dashBoardLink" href="#">Cancelled</a>
+        <a name="pending" value="pending" class="dashBoardLink" href="/admin">Pending</a>
+        <a name="complete" value="complete" class="dashBoardLink" href="/admin/completed">Completed</a>
+        <a name="cancelled" value="cancelled" class="dashBoardLink" href="/admin/cancelled">Cancelled</a>
     </div>
         
     <table name="data">
@@ -25,11 +25,11 @@
             <th>Status</th>
             <th>Method of Receiving</th>
         </tr>
-        <tr class="body">
-            <!-- Some 'if statement' if there are no pending orders -->
-            @if(count($pendingOrders) > 0)
-                @foreach($pendingOrders as $dataRow)
-                    
+        
+            <!-- Some 'if statement' if there are orders or not -->
+        @if(count($orders) > 0)
+            @foreach(($orders) as $dataRow)
+                <tr class="body">
                     <td>{{$dataRow['id']}}</td>
                     <td>{{$dataRow['client_name']}}</td>
                     <td>{{$dataRow['client_email']}}</td>
@@ -40,26 +40,26 @@
                     <td>{{$dataRow['dimension_y']}}</td>
                     <td>{{$dataRow['status']}}</td>
                     <td>{{$dataRow['method_of_receiving']}}</td>
-                @endforeach
+                </tr>
+            @endforeach
 
-            @else
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-            @endif
+        @else
+        <tr class="body">
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
         </tr>
+        @endif
         <tr class="footer">
-            <td class="navigation" colspan=9>
-                <div class="navigation-previous">
-                    Previous 1 Next
-                </div>
+            <td class="navigation" colspan=10>
+                Previous 1 Next
             </td>
         </tr>
         <!-- TEST -->

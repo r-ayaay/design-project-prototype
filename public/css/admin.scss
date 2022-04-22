@@ -59,7 +59,10 @@ $accentColor: #48487f;
 
         .body{
             background-color: rgb(239, 232, 232);
-
+            // display: block;
+            // .data-row{
+            //     display:block;
+            // }
             td{
                 padding: 12px;
                 text-align: center;
@@ -67,11 +70,13 @@ $accentColor: #48487f;
         }
 
         .footer{             
-            border-top: 1px solid rgb(188, 188, 188);;
+            border-top: 1px solid rgb(188, 188, 188);
+            
             .navigation{
                 padding: 12px;
-                text-align: center;
-
+                text-align: center; 
+                
+                
                 &:last-child{
                     border-bottom-right-radius: 10px;
                     // border-right: none;
