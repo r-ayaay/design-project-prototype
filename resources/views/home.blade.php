@@ -36,8 +36,8 @@
                     <td>{{$dataRow['photo']}}</td>
                     <td>{{$dataRow['product']}}</td>
                     <td>{{$dataRow['quantity']}}</td>
-                    <td>{{$dataRow['dimension_x']}}</td>
-                    <td>{{$dataRow['dimension_y']}}</td>
+                    <td>{{$dataRow['dimension_x']}} x {{$dataRow['dimension_y']}}</td>
+                    <td>{{$dataRow['price']}}</td>
                     <td>{{$dataRow['status']}}</td>
                     <td>{{$dataRow['method_of_receiving']}}</td>
                 </tr>
@@ -59,7 +59,7 @@
         @endif
         <tr class="footer">
             <td class="navigation" colspan=10>
-                Previous 1 Next
+                Previous | Next
             </td>
         </tr>
         <!-- TEST -->
