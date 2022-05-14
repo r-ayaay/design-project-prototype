@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: Helvetica;
 }
 
 .brand {
@@ -14,6 +15,9 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
+  background-color: white;
+  -webkit-box-shadow: 0 1px 10px #b9b9b9;
+          box-shadow: 0 1px 10px #b9b9b9;
 }
 
 nav ul {
@@ -40,6 +44,151 @@ nav ul li a.brand {
 
 main {
   margin: 0 60px;
-  margin-top: 66px;
+  margin-top: 70px;
+}
+
+main .brand {
+  text-align: center;
+  font-size: 36px;
+  font-family: Helvetica;
+}
+
+main .sub {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+main .products {
+  margin: 0 200px;
+  margin-top: 50px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 25px 0;
+}
+
+main .products .card {
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 75px 300px;
+      grid-template-columns: 75px 300px;
+  padding: 25px 15px;
+  background-color: #ffffff;
+  border: 2px solid #48487f;
+  border-radius: 5px;
+  -webkit-transition-duration: .1s;
+          transition-duration: .1s;
+}
+
+main .products .card svg {
+  fill: #48487f;
+}
+
+main .products .card .details {
+  padding-left: 5px;
+}
+
+main .products .card .details ul {
+  list-style-type: none;
+  font-size: 20px;
+}
+
+main .products .card:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  cursor: pointer;
+  -webkit-box-shadow: 5px 5px 5px #b9b9b9;
+          box-shadow: 5px 5px 5px #b9b9b9;
+  -webkit-transition-duration: .1s;
+          transition-duration: .1s;
+}
+
+main form {
+  margin-top: 25px;
+  font-size: 20px;
+}
+
+main form input {
+  background-color: #ececec;
+  font-size: 24px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #48487f;
+}
+
+main form input[type="number"],
+main form input[type="file"] {
+  border: none;
+}
+
+main form input[type="number"] {
+  width: 75px;
+  text-align: right;
+}
+
+main form .fileBtn {
+  width: 250px;
+  text-align: center;
+  padding: 10px;
+  background: #48487f;
+  color: #eee;
+  margin-bottom: 20px;
+}
+
+main form .fileBtn:hover {
+  cursor: pointer;
+}
+
+main form #submitBtn {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  font-size: 32px;
+  width: 270px;
+  color: white;
+  background-color: #48487f;
+}
+
+.split {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+#img-prev {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#img-prev img {
+  height: 500px;
+  width: 708px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.hero {
+  margin: 0 -60px;
+}
+
+.hero img {
+  width: 100%;
+  height: 275px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+hr {
+  border: 2px solid #48487f;
+  margin: 1px auto;
+  width: 25%;
 }
 /*# sourceMappingURL=main.css.map */
